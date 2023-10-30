@@ -1,26 +1,6 @@
 # !/bin/bash
 
-# Включаем Num Lock
-xdotool key Num_Lock
 
-# Добавляем русскую раскладку
-xdotool mousemove 50 600 click 1
-sleep 1 
-xdotool key l
-xdotool key a
-xdotool key n
-sleep 0.5
-xdotool mousemove 1400 500 click 1
-sleep 0.5
-xdotool mousemove 1700 700 click 1
-sleep 0.5
-xdotool mousemove 1700 750 click 1
-sleep 0.1
-xdotool mousemove 1700 790 click 1
-sleep 0.1
-xdotool mousemove 1850 580 click 1
-sleep 0.1
-xdotool key Alt+F4
 
 # Открываем браузер и производим регистрацию
 xdotool mousemove 50 50 click 1
@@ -252,6 +232,30 @@ xdotool key ctrl+v
 xdotool mousemove 1250 720 click 1
 
 xdotool mousemove 50 200 click 1
+
+sleep 0.5
+
+# Включаем Num Lock
+xdotool key Num_Lock
+
+# Добавляем русскую раскладку
+xdotool mousemove 50 600 click 1
+sleep 1 
+xdotool key l
+xdotool key a
+xdotool key n
+sleep 0.5
+xdotool mousemove 1400 500 click 1
+sleep 0.5
+xdotool mousemove 1700 700 click 1
+sleep 0.5
+xdotool mousemove 1700 750 click 1
+sleep 0.1
+xdotool mousemove 1700 790 click 1
+sleep 0.1
+xdotool mousemove 1850 580 click 1
+sleep 0.1
+xdotool key Alt+F4
 
 sleep 0.5
 
