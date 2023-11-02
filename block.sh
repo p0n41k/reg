@@ -3,21 +3,6 @@ xset s 5
 xrandr --output  DP-1 --brightness 0
 xdotool mousemove 50 550 click 1
 sleep 1
-xdotool key KP_Subtract
-xdotool key KP_Add
-xdotool key KP_Subtract
-xdotool key KP_Add
-sleep 0.1
-xdotool key Return
-sleep 2
-xdotool key KP_Subtract
-xdotool key KP_Add
-xdotool key KP_Subtract
-xdotool key KP_Add
-xdotool key Return
-sleep 2
-xdotool mousemove 50 550 click 1
-sleep 1
 xdotool key Return
 sleep 10
 xrandr --output  DP-1 --brightness 1
