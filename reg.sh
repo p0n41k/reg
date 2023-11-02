@@ -235,7 +235,6 @@ while true; do
   fi
 done
 xdotool mousemove 1800 320 click 1
-sleep 3
 
 while true; do
   color=$(import -window root -crop 1x1+2150+420 -depth 8 txt:- | awk 'NR==2 {print $3}')
@@ -394,7 +393,5 @@ xdotool key KP_Add
 xdotool key KP_Subtract
 xdotool key KP_Add
 xdotool key Return
-sleep 1
-xdotool key Alt+F4
 
 code goreload/
