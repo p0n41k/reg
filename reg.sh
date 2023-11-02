@@ -8,7 +8,18 @@ sleep 3
 xdotool mousemove 3420 100 click 1
 sleep 0.2
 xdotool mousemove 3400 130 click 1 
-sleep 3
+
+# Ждем загрузки страницы
+while true; do
+  color=$(import -window root -crop 1x1+1900+900 -depth 8 txt:- | awk 'NR==2 {print $3}')
+  if [ "$color" == "#0060DF" ]; then
+  sleep 0.5
+  break
+  else
+  sleep 0.5
+  fi
+done
+
 
 # Пишем наш логин Firefox
 xdotool key n
