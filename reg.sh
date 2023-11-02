@@ -226,9 +226,25 @@ xdotool key s
 xdotool key Return
 
 # Ждем прогрузкий сайта, регаемся, удаляем старый SSH, копируем новый и вставляем его
-sleep 2
+while true; do
+  color=$(import -window root -crop 1x1+1800+320 -depth 8 txt:- | awk 'NR==2 {print $3}')
+  if [ "$color" == "#AFAFAF" ]; then
+  break
+  else
+  sleep 0.5
+  fi
+done
 xdotool mousemove 1800 320 click 1
 sleep 3
+
+while true; do
+  color=$(import -window root -crop 1x1+2150+420 -depth 8 txt:- | awk 'NR==2 {print $3}')
+  if [ "$color" == "#DB2828" ]; then
+  break
+  else
+  sleep 0.5
+  fi
+done
 xdotool mousemove 2150 420 click 1
 sleep 0.5
 xdotool mousemove 2100 900 click 1
