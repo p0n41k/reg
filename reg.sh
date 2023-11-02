@@ -108,7 +108,21 @@ xdotool key o
 xdotool key o
 xdotool key l
 xdotool key Return
-sleep 2.5
+# sleep 2.5
+
+
+# Ждем прогрузки сайта
+
+while true; do
+  color=$(import -window root -crop 1x1+2500+500 -depth 8 txt:- | awk 'NR==2 {print $3}')
+  if [ "$color" == "#292929" ]; then
+  sleep 0.5
+  break
+  else
+  sleep 0.5
+  fi
+done
+
 
 xdotool mousemove 2500 500 click 1
 
