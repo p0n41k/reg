@@ -379,4 +379,22 @@ sleep 0.5
 xdotool key Alt+F4
 
 
+
+
+xdotool mousemove 50 550 click 1
+sleep 1.5
+xdotool key KP_Subtract
+xdotool key KP_Add
+xdotool key KP_Subtract
+xdotool key KP_Add
+xdotool key Return
+sleep 0.1
+xdotool key KP_Subtract
+xdotool key KP_Add
+xdotool key KP_Subtract
+xdotool key KP_Add
+xdotool key Return
+sleep 1
+xdotool key Alt+F4
+
 code goreload/
