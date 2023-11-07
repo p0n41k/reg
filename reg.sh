@@ -90,12 +90,7 @@ git config --global user.email "nur_erbol_2002@mail.ru"
 nmcli device wifi hotspot ifname wlp0s20f3 ssid "@lem" password "080512@lem"
 
 # Создаем новую вкладку и вставляем ссыку на 01.alem (3 сточка) 
-sleep 0.1
-xdotool key ctrl+t
-sleep 0.1
-xdotool key ctrl + Tab
-xdotool key ctrl + w
-sleep 0.1
+xdotool key F6
 xdotool key 0
 xdotool key 1
 xdotool key period
