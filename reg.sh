@@ -93,6 +93,9 @@ nmcli device wifi hotspot ifname wlp0s20f3 ssid "@lem" password "080512@lem"
 sleep 0.1
 xdotool key ctrl+t
 sleep 0.1
+xdotool key ctrl + Tab
+xdotool key ctrl + w
+sleep 0.1
 xdotool key 0
 xdotool key 1
 xdotool key period
