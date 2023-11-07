@@ -262,6 +262,7 @@ xdotool mousemove 1500 320 click 1
 xdotool keydown Shift
 xdotool key ctrl+c
 xdotool keyup Shift
+xdotool key Alt+F4
 
 xdotool mousemove 50 50 click 1
 
@@ -385,7 +386,6 @@ while true; do
   if [ "$color" == "#2C2C2C" ]; then
   break
   else
-  echo ne tot $color
   sleep 0.1
   fi
 done
@@ -401,5 +401,18 @@ xdotool key KP_Add
 xdotool key KP_Subtract
 xdotool key KP_Add
 xdotool key Return
+
+while true; do
+  color=$(import -window root -crop 1x1+1600+630 -depth 8 txt:- | awk 'NR==2 {print $3}')
+  if [ "$color" == "#2C2C2C" ]; then
+  break
+  else
+  sleep 0.1
+  fi
+done
+
+xdotool key Alt+F4
+
+
 
 # code goreload/
