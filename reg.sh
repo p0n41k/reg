@@ -379,17 +379,27 @@ xdotool key Alt+F4
 
 
 xdotool mousemove 50 550 click 1
-# sleep 1.5
-# xdotool key KP_Subtract
-# xdotool key KP_Add
-# xdotool key KP_Subtract
-# xdotool key KP_Add
-# xdotool key Return
+
+while true; do
+  color=$(import -window root -crop 1x1+1650+630 -depth 8 txt:- | awk 'NR==2 {print $3}')
+  if [ "$color" == "#2C2C2C" ]; then
+  break
+  else
+  echo ne tot $color
+  sleep 0.1
+  fi
+done
+
+xdotool key KP_Subtract
+xdotool key KP_Add
+xdotool key KP_Subtract
+xdotool key KP_Add
+xdotool key Return
 # sleep 0.1
-# xdotool key KP_Subtract
-# xdotool key KP_Add
-# xdotool key KP_Subtract
-# xdotool key KP_Add
-# xdotool key Return
+xdotool key KP_Subtract
+xdotool key KP_Add
+xdotool key KP_Subtract
+xdotool key KP_Add
+xdotool key Return
 
 # code goreload/
