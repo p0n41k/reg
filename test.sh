@@ -1,6 +1,8 @@
 #!/bin/bash
 
-xdotool mousemove 1800 800
+passwd
+
+# xdotool mousemove 1800 800
 # sleep 1
 
 

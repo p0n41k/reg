@@ -299,89 +299,89 @@ xdotool mousemove 1700 790 click 1
 sleep 0.1
 xdotool mousemove 1850 580 click 1
 sleep 0.1
-xdotool key Alt+F4
+# xdotool key Alt+F4
 
-sleep 0.5
+# sleep 0.5
 
-gnome-terminal
-
-
-
-sleep 0.5
-
-
-xdotool key g
-xdotool key i
-xdotool key t
-xdotool key space
-xdotool key c
-xdotool key l
-xdotool key o
-xdotool key n
-xdotool key e
-xdotool key space
-xdotool key g
-xdotool key i
-xdotool key t
-xdotool keydown Shift
-xdotool key 2
-xdotool keyup Shift
-xdotool key g
-xdotool key i
-xdotool key t
-xdotool key period
-xdotool key 0
-xdotool key 1
-xdotool key period
-xdotool key a
-xdotool key l
-xdotool key e
-xdotool key m
-xdotool key period
-xdotool key s
-xdotool key c
-xdotool key h
-xdotool key o
-xdotool key o
-xdotool key l
-xdotool key colon
-xdotool key y
-xdotool key n
-xdotool key u
-xdotool key r
-xdotool key m
-xdotool key a
-xdotool key k
-xdotool key h
-xdotool key slash
-xdotool key g
-xdotool key o
-xdotool key r
-xdotool key e
-xdotool key l
-xdotool key o
-xdotool key a
-xdotool key d
-xdotool key period
-xdotool key g
-xdotool key i
-xdotool key t
-xdotool key Return
-
-sleep 2
-xdotool key y
-xdotool key e
-xdotool key s
-xdotool key Return
-sleep 2
-xdotool key ctrl+c
-xdotool key ctrl+c
-xdotool key ctrl+c
-sleep 0.5
-
-xdotool key Alt+F4
+# gnome-terminal
 
 
 
+# sleep 0.5
 
-code goreload/
+
+# xdotool key g
+# xdotool key i
+# xdotool key t
+# xdotool key space
+# xdotool key c
+# xdotool key l
+# xdotool key o
+# xdotool key n
+# xdotool key e
+# xdotool key space
+# xdotool key g
+# xdotool key i
+# xdotool key t
+# xdotool keydown Shift
+# xdotool key 2
+# xdotool keyup Shift
+# xdotool key g
+# xdotool key i
+# xdotool key t
+# xdotool key period
+# xdotool key 0
+# xdotool key 1
+# xdotool key period
+# xdotool key a
+# xdotool key l
+# xdotool key e
+# xdotool key m
+# xdotool key period
+# xdotool key s
+# xdotool key c
+# xdotool key h
+# xdotool key o
+# xdotool key o
+# xdotool key l
+# xdotool key colon
+# xdotool key y
+# xdotool key n
+# xdotool key u
+# xdotool key r
+# xdotool key m
+# xdotool key a
+# xdotool key k
+# xdotool key h
+# xdotool key slash
+# xdotool key g
+# xdotool key o
+# xdotool key r
+# xdotool key e
+# xdotool key l
+# xdotool key o
+# xdotool key a
+# xdotool key d
+# xdotool key period
+# xdotool key g
+# xdotool key i
+# xdotool key t
+# xdotool key Return
+
+# sleep 2
+# xdotool key y
+# xdotool key e
+# xdotool key s
+# xdotool key Return
+# sleep 2
+# xdotool key ctrl+c
+# xdotool key ctrl+c
+# xdotool key ctrl+c
+# sleep 0.5
+
+# xdotool key Alt+F4
+
+
+
+
+# code goreload/
