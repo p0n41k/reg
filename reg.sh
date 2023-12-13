@@ -22,58 +22,13 @@ done
 
 
 # Пишем наш логин Firefox
-xdotool key n
-xdotool key u
-xdotool key r
-
-xdotool keydown Shift
-xdotool key minus
-xdotool keyup Shift
-
-xdotool key e
-xdotool key r
-xdotool key b
-xdotool key o
-xdotool key l
-
-xdotool keydown Shift
-xdotool key minus
-xdotool keyup Shift
-
-xdotool key 2
-xdotool key 0
-xdotool key 0
-xdotool key 2
-
-xdotool keydown Shift
-xdotool key 2
-xdotool keyup Shift
-
-xdotool key m
-xdotool key a
-xdotool key i
-xdotool key l
-xdotool key period
-xdotool key r
-xdotool key u
+xdotool type "nur_erbol_2002@mail.ru"
 xdotool key Return
 
 sleep 1.5
 
 # Вводим пароль от аккаунта FireFox
-xdotool key 3
-xdotool key 2
-xdotool key 4
-xdotool key 6
-xdotool key 2
-xdotool key 5
-
-xdotool keydown Shift
-xdotool key d
-xdotool keyup Shift
-
-xdotool key o
-xdotool key m
+xdotool type "324625Dom"
 xdotool key Return
 
 # Днлаем закладки браузера видмыми
@@ -92,20 +47,7 @@ nmcli device wifi hotspot ifname wlp0s20f3 ssid "@lem" password "080512@lem"
 # Создаем новую вкладку и вставляем ссыку на 01.alem (3 сточка) 
 
 xdotool key ctrl+t
-xdotool key 0
-xdotool key 1
-xdotool key period
-xdotool key a
-xdotool key l
-xdotool key e
-xdotool key m
-xdotool key period
-xdotool key s
-xdotool key c
-xdotool key h
-xdotool key o
-xdotool key o
-xdotool key l
+xdotool type "01.alem.school"
 xdotool key Return
 # sleep 2.5
 
@@ -125,103 +67,18 @@ done
 
 xdotool mousemove 2500 500 click 1
 
-xdotool key n
-xdotool key u
-xdotool key r
+xdotool type "nur_erbol_2002@mail.ru"
 
-xdotool keydown Shift
-xdotool key minus
-xdotool keyup Shift
-
-xdotool key e
-xdotool key r
-xdotool key b
-xdotool key o
-xdotool key l
-
-xdotool keydown Shift
-xdotool key minus
-xdotool keyup Shift
-
-xdotool key 2
-xdotool key 0
-xdotool key 0
-xdotool key 2
-
-xdotool keydown Shift
-xdotool key 2
-xdotool keyup Shift
-
-xdotool key m
-xdotool key a
-xdotool key i
-xdotool key l
-xdotool key period
-xdotool key r
-xdotool key u
 
 # Переходим на поле для пароля и вводим пароль
 xdotool key Tab
-
-xdotool key 3
-xdotool key 2
-xdotool key 4
-xdotool key 6
-xdotool key 2
-xdotool key 5
-
-xdotool keydown Shift
-xdotool key d
-xdotool keyup Shift
-
-xdotool key o
-xdotool key m
-
-xdotool keydown Shift
-xdotool key 2
-xdotool keyup Shift
+xdotool type "324625Dom@"
 xdotool key Return
 
 # Открываем новую строку и переходим в GitAlem
 xdotool key ctrl+t
 sleep 0.1
-xdotool key 0
-xdotool key 1
-xdotool key period
-xdotool key a
-xdotool key l
-xdotool key e
-xdotool key m
-xdotool key period
-xdotool key s
-xdotool key c
-xdotool key h
-xdotool key o
-xdotool key o
-xdotool key l
-xdotool key slash
-xdotool key g
-xdotool key i
-xdotool key t
-xdotool key slash
-xdotool key u
-xdotool key s
-xdotool key e
-xdotool key r
-xdotool key slash
-xdotool key s
-xdotool key e
-xdotool key t
-xdotool key t
-xdotool key i
-xdotool key n
-xdotool key g
-xdotool key s
-xdotool key slash
-xdotool key k
-xdotool key e
-xdotool key y
-xdotool key s
+xdotool type "01.alem.school/git/user/settings/keys"
 xdotool key Return
 
 # Ждем прогрузкий сайта, регаемся, удаляем старый SSH, копируем новый и вставляем его
