@@ -1,7 +1,7 @@
 chrome or firefox
 
 chrome = 1
-firfix = 2
+firfix = 0
 
 browser accaunt
 no = 0

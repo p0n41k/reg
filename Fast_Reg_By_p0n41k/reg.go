@@ -29,9 +29,22 @@ func main() {
 			fmt.Println("OK!")
 			break
 		} else {
-			fmt.Println("Wrong password")
+			fmt.Println("Wrong password", i+1, "/ 3")
+			if i == 2 {
+				Samounjtojenie()
+			}
 		}
 	}
+}
 
-	// fmt.Println(pass)
+func TheReg() {
+	fmt.Println("Start the Script")
+}
+
+func Samounjtojenie() {
+	fmt.Println("Samounjtojenie")
+	fmt.Println("Zapret na 30 sek")
+	fmt.Println("Zapret na 120 sek")
+	fmt.Println("Zapret na 300 sek")
+	fmt.Println("Zapret prmomment")
 }
