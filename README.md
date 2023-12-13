@@ -1,5 +1,5 @@
-# Инструкция на русском снизу
-## FastRegistrationFor01Alem
+# FastRegistrationFor01Alem
+## Инструкция на русском снизу
 ### About the Script
 ### О скрипте
 пункт 1 ттт
