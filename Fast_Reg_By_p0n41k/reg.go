@@ -16,6 +16,42 @@ import (
 type Logs struct {
 	login    string
 	password string
+
+	browser         int // 0 = FireFox || 1 = Chrome
+	BrowserAcc      int
+	VisableBokmarks int
+
+	WriteGitConfigs int
+	GitUserEmail    string
+	GitUserName     string
+
+	TurnOnWifiHotspot int
+	WifiSSID          string
+	WifiPasswd        string
+
+	Alem01Ligin int
+	AlemEmail   string
+	AlemPasswd  string
+
+	CreateNewSSHforGITEA int
+
+	NumLockOff int
+
+	AddRussianKeyboard int
+
+	SetPKPasswd int
+	PasswdOfPK  string
+
+	BlockWith_PauseBreak_Buttom int
+
+	CastomImageForBlockScreen     int
+	CastomImageForBlockScreenPath string
+
+	GitCloneYourWorkingRepoFromGITEA int
+	GITEA_RepoName                   string
+	OpenTheRepoInVSCode              int
+
+	ScreenLockAfterEndScript int
 }
 
 var User Logs
