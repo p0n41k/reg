@@ -2,7 +2,15 @@ package main
 
 import (
 	"fmt"
+	"os"
+	"os/exec"
+	"os/signal"
+	"strconv"
 	"strings"
+	"syscall"
+	"time"
+
+	"golang.org/x/crypto/ssh/terminal"
 )
 
 type Logs struct {
@@ -18,22 +26,67 @@ func init() {
 }
 
 func main() {
-	fmt.Println("\n" + "FastReg_By_p0n41k" + "\n")
+	CtrlCExit()
+	ClearTheTerminal()
+
+	fmt.Println("\n" + "FastReg_By_p0n41k" + "\n" + "GitHub: https://github.com/p0n41k\n")
 	fmt.Println("Enter the password for " + strings.ToUpper(User.login) + ": ")
 
 	for i := 0; i < 3; i++ {
-		var pass string
-		fmt.Scan(&pass)
-
-		if pass == User.password {
-			fmt.Println("OK!")
-			break
-		} else {
-			fmt.Println("Wrong password", i+1, "/ 3")
-			if i == 2 {
-				Samounjtojenie()
-			}
+		pass, err := CheckPass()
+		if err != nil {
+			fmt.Println(err)
+			return
 		}
+		if pass {
+			time.Sleep(500 * time.Millisecond)
+			TheReg()
+			return
+		} else {
+			time.Sleep(1 * time.Second)
+			fmt.Println("Wrong password, try again", strconv.Itoa(i+1)+"/3")
+		}
+	}
+	Samounjtojenie()
+}
+
+func CtrlCExit() {
+	initialState, err := terminal.GetState(int(os.Stdin.Fd()))
+	if err != nil {
+		fmt.Println("Ошибка при получении состояния терминала:", err)
+		return
+	}
+
+	// Обработчик сигнала прерывания (Ctrl + C)
+	c := make(chan os.Signal, 1)
+	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
+
+	go func() {
+		<-c
+		// Восстанавливаем состояние терминала перед выходом
+		terminal.Restore(int(os.Stdin.Fd()), initialState)
+		os.Exit(0)
+	}()
+}
+
+func ClearTheTerminal() {
+	cmd := exec.Command("clear")
+	cmd.Stdout = os.Stdout
+	cmd.Run()
+}
+
+func CheckPass() (bool, error) {
+	password, err := terminal.ReadPassword(int(os.Stdin.Fd()))
+	if err != nil {
+		return false, err
+	}
+
+	passwordStr := string(password)
+
+	if passwordStr == User.password {
+		return true, nil
+	} else {
+		return false, nil
 	}
 }
 
@@ -43,8 +96,4 @@ func TheReg() {
 
 func Samounjtojenie() {
 	fmt.Println("Samounjtojenie")
-	fmt.Println("Zapret na 30 sek")
-	fmt.Println("Zapret na 120 sek")
-	fmt.Println("Zapret na 300 sek")
-	fmt.Println("Zapret prmomment")
 }
