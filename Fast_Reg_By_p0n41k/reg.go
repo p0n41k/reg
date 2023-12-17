@@ -168,5 +168,6 @@ func TheReg() {
 func Samounjtojenie() {
 	cmd := exec.Command("gnome-session-quit --logout --force")
 	cmd.Stdout = os.Stdout
-	cmd.Run()
+	err := cmd.Run()
+	fmt.Println(err)
 }
