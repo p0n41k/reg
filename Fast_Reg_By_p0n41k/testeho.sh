@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-shLogin="" # 
+shLogin="" # Твой логин GTEA Пример ynurmakh
 shPassword="" #
 
 shBrowser="" # 

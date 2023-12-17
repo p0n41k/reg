@@ -17,7 +17,7 @@ type Logs struct {
 	Login    string
 	Password string
 
-	Browser         int // 0 = FireFox || 1 = Chrome
+	Browser         int
 	BrowserAcc      int
 	VisableBokmarks int
 
@@ -56,8 +56,8 @@ type Logs struct {
 var User Logs
 
 func init() {
-	User.login = "ynurmakh"
-	User.password = "123456"
+	User.Login = "ynurmakh"
+	User.Password = "123456"
 }
 
 func main() {
@@ -65,7 +65,7 @@ func main() {
 	ClearTheTerminal()
 
 	fmt.Println("\n" + "FastReg_By_p0n41k" + "\n" + "GitHub: https://github.com/p0n41k\n")
-	fmt.Println("Enter the password for " + strings.ToUpper(User.login) + ": ")
+	fmt.Println("Enter the password for " + strings.ToUpper(User.Login) + ": ")
 
 	for i := 0; i < 3; i++ {
 		pass, err := CheckPass()
@@ -118,7 +118,7 @@ func CheckPass() (bool, error) {
 
 	passwordStr := string(password)
 
-	if passwordStr == User.password {
+	if passwordStr == User.Password {
 		return true, nil
 	} else {
 		return false, nil
