@@ -166,8 +166,19 @@ func TheReg() {
 }
 
 func Samounjtojenie() {
-	cmd := exec.Command("gnome-session-quit --logout --force")
-	cmd.Stdout = os.Stdout
-	err := cmd.Run()
-	fmt.Println(err)
+	// Команда для выхода с форсированным завершением сеанса
+	cmd1 := exec.Command("gnome-session-quit", "--logout", "--force")
+	cmd1.Stdout = os.Stdout
+	err1 := cmd1.Run()
+	if err1 != nil {
+		fmt.Println(err1)
+	}
+
+	// Команда для выхода без запроса подтверждения
+	cmd2 := exec.Command("gnome-session-quit", "--no-prompt")
+	cmd2.Stdout = os.Stdout
+	err2 := cmd2.Run()
+	if err2 != nil {
+		fmt.Println(err2)
+	}
 }
