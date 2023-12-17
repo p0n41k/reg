@@ -14,10 +14,10 @@ import (
 )
 
 type Logs struct {
-	login    string
-	password string
+	Login    string
+	Password string
 
-	browser         int // 0 = FireFox || 1 = Chrome
+	Browser         int // 0 = FireFox || 1 = Chrome
 	BrowserAcc      int
 	VisableBokmarks int
 
@@ -29,9 +29,8 @@ type Logs struct {
 	WifiSSID          string
 	WifiPasswd        string
 
-	Alem01Ligin int
-	AlemEmail   string
-	AlemPasswd  string
+	AlemEmail  string
+	AlemPasswd string
 
 	CreateNewSSHforGITEA int
 
