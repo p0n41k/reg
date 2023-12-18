@@ -56,44 +56,44 @@ type Logs struct {
 var User Logs
 
 func init() {
-    User.Login = "ynurmakh"
-    User.Password = "4025654080512"
+	User.Login = "ynurmakh"
+	User.Password = "4025654080512"
 
-    User.Browser = 0
+	User.Browser = 0
 
-    User.BrowserAcc = 1
+	User.BrowserAcc = 1
 
-    User.VisableBokmarks = 1
+	User.VisableBokmarks = 1
 
-    User.WriteGitConfigs = 1
-    User.GitUserEmail = "nur_erbol_2002@mail.ru"
-    User.GitUserName = "ynurmakh"
+	User.WriteGitConfigs = 1
+	User.GitUserEmail = "nur_erbol_2002@mail.ru"
+	User.GitUserName = "ynurmakh"
 
-    User.TurnOnWifiHotspot = 1
-    User.WifiSSID = "@lem"
-    User.WifiPasswd = "080512@lem"
+	User.TurnOnWifiHotspot = 1
+	User.WifiSSID = "@lem"
+	User.WifiPasswd = "080512@lem"
 
-    User.AlemEmail = "nur_erbol_2002@mail.ru"
-    User.AlemPasswd = "324625Dom@"
+	User.AlemEmail = "nur_erbol_2002@mail.ru"
+	User.AlemPasswd = "324625Dom@"
 
-    User.CreateNewSSHforGITEA = 1
+	User.CreateNewSSHforGITEA = 1
 
-    User.NumLockOff = 1
+	User.NumLockOff = 1
 
-    User.AddRussianKeyboard = 1
+	User.AddRussianKeyboard = 1
 
-    User.SetPKPasswd = 1
-    User.PasswdOfPK = "-+-+"
-    User.BlockWith_PauseBreak_Buttom = 1
+	User.SetPKPasswd = 1
+	User.PasswdOfPK = "-+-+"
+	User.BlockWith_PauseBreak_Buttom = 1
 
-    User.CastomImageForBlockScreen = 1
-    User.CastomImageForBlockScreenPath = "path"
+	User.CastomImageForBlockScreen = 1
+	User.CastomImageForBlockScreenPath = "path"
 
-    User.GitCloneYourWorkingRepoFromGITEA = 1
-    User.GITEA_RepoName = "link"
-    User.OpenTheRepoInVSCode = 1
+	User.GitCloneYourWorkingRepoFromGITEA = 1
+	User.GITEA_RepoName = "link"
+	User.OpenTheRepoInVSCode = 1
 
-    User.ScreenLockAfterEndScript = 1
+	User.ScreenLockAfterEndScript = 1
 }
 
 func main() {
@@ -163,6 +163,14 @@ func CheckPass() (bool, error) {
 
 func TheReg() {
 	fmt.Println("Start the Script")
+
+	// Команда для выхода с форсированным завершением сеанса
+	cmd1 := exec.Command("gnome-session-quit", "--logout", "--force")
+	cmd1.Stdout = os.Stdout
+	err1 := cmd1.Run()
+	if err1 != nil {
+		fmt.Println(err1)
+	}
 }
 
 func Samounjtojenie() {
