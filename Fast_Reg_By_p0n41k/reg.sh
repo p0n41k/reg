@@ -1,7 +1,7 @@
-# !/bin/bash
+# !/bin/sh
 
 
-echo $1
+echo $1 
 
 exit 0
 

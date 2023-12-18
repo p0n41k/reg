@@ -164,12 +164,11 @@ func CheckPass() (bool, error) {
 func TheReg() {
 	fmt.Println("Start the Script")
 
-	// Команда для выхода с форсированным завершением сеанса
-	cmd1 := exec.Command("gnome-session-quit", "--logout", "--force")
+	cmd1 := exec.Command("./reg.sh", "123")
 	cmd1.Stdout = os.Stdout
 	err1 := cmd1.Run()
 	if err1 != nil {
-		fmt.Println(err1)
+		fmt.Println(err1, "<<<<<<<<<<<<")
 	}
 }
 
