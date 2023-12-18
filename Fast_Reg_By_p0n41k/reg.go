@@ -17,8 +17,11 @@ type Logs struct {
 	Login    string
 	Password string
 
-	Browser         int
-	BrowserAcc      int
+	Browser            int
+	BrowserAcc         int
+	BrowserAccEmail    string
+	BrowserAccPassword string
+
 	VisableBokmarks int
 
 	WriteGitConfigs int
@@ -62,6 +65,8 @@ func init() {
 	User.Browser = 0
 
 	User.BrowserAcc = 1
+	User.BrowserAccEmail = "nur_erbol_2002@mail.ru"
+	User.BrowserAccPassword = "324625Dom"
 
 	User.VisableBokmarks = 1
 
@@ -162,9 +167,10 @@ func CheckPass() (bool, error) {
 }
 
 func TheReg() {
-	fmt.Println("Start the Script")
-
-	cmd1 := exec.Command("./reg.sh", "123")
+	ClearTheTerminal()
+	cmd1 := exec.Command("sh", "./reg.sh", User.Login, User.Password, strconv.Itoa(User.Browser), strconv.Itoa(User.BrowserAcc), User.BrowserAccEmail, User.BrowserAccPassword, strconv.Itoa(User.VisableBokmarks), strconv.Itoa(User.WriteGitConfigs), User.GitUserEmail, User.GitUserName, strconv.Itoa(User.TurnOnWifiHotspot), User.WifiSSID, User.WifiPasswd, User.AlemEmail, User.AlemPasswd, strconv.Itoa(User.CreateNewSSHforGITEA), strconv.Itoa(User.NumLockOff), strconv.Itoa(User.AddRussianKeyboard), strconv.Itoa(User.SetPKPasswd), User.PasswdOfPK, strconv.Itoa(User.BlockWith_PauseBreak_Buttom), strconv.Itoa(User.CastomImageForBlockScreen), User.CastomImageForBlockScreenPath, strconv.Itoa(User.GitCloneYourWorkingRepoFromGITEA), User.GITEA_RepoName, strconv.Itoa(User.OpenTheRepoInVSCode), strconv.Itoa(User.ScreenLockAfterEndScript))
+	// cmd1 := exec.Command("sh", "./reg.sh", "123")
+	// cmd1 := exec.Command("sh", "reg.sh", User.Login, User.Password)
 	cmd1.Stdout = os.Stdout
 	err1 := cmd1.Run()
 	if err1 != nil {

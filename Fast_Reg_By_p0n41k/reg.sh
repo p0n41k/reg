@@ -1,10 +1,65 @@
 # !/bin/sh
 
+# Читаем аргументы, Именно в такой последовательности они передаються из бинарного скрипта
+Login=$1
+Password=$2
 
-echo $1 
+Browser=$3
+BrowserAcc=$4
+BrowserAccEmail=$5
+BrowserAccPassword=$6
+
+VisableBokmarks=$7
+
+WriteGitConfigs=$8
+GitUserEmail=$9
+GitUserName=${10}
+
+TurnOnWifiHotspot=${11}
+WifiSSID=${12}
+WifiPasswd=${13}
+
+AlemEmail=${14}
+AlemPasswd=${15}
+
+CreateNewSSHforGITEA=${16}
+
+NumLockOff=${17}
+
+AddRussianKeyboard=${18}
+
+SetPKPasswd=${19}
+PasswdOfPK=${20}
+
+BlockWith_PauseBreak_Buttom=${21}
+
+CastomImageForBlockScreen=${22}
+CastomImageForBlockScreenPath=${23}
+
+GitCloneYourWorkingRepoFromGITEA=${24}
+GITEA_RepoName=${25}
+OpenTheRepoInVSCode=${26}
+
+ScreenLockAfterEndScript=${27}
+
+echo $GITEA_RepoName
+echo $Browser # Значение тут 0
+
+
+
+if [ "$Browser" -eq 0 ]; then
+    #Если Browser = 0 >> Firefox Web Browser
+    firefox -headless
+elif [ "$Browser" -eq 1 ]; then
+    #Если Browser = 1 >> Google Chrome
+    google-chrome
+else
+    echo "Неверно выбран Browser, пожалуйста пересоберите скрипт (0 = Firefox Web Browser / 1 = Google Chrome)"
+    exit 0
+fi
+
 
 exit 0
-
 # Открываем браузер и производим регистрацию
 xdotool mousemove 50 50 click 1
 sleep 3

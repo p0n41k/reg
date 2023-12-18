@@ -6,8 +6,8 @@ shPassword="4025654080512" # Твой пароль от будущего скр�
 
 shBrowser="0" # Выберите свой браузер    (0 = Firefox Web Browser / 1 = Google Chrome)
 shBrowserAcc="1" # Нужно ли заходить в аккаунт браузера    (0 = нет / 1 = да)
-sh="nur_erbol_2002@mail.ru" # Email от твоего Mozilla account / Google Accaunt
-sh="324625Dom" # Пароль от твоего Mozilla account / Google Accaunt
+shBrowserAccEmail="nur_erbol_2002@mail.ru" # Email от твоего Mozilla account / Google Accaunt
+shBrowserAccPassword="324625Dom" # Пароль от твоего Mozilla account / Google Accaunt
 
 shVisableBokmarks="1" # Сделать видемым закладки, полезно если пользуеться избранными вкладками
 
@@ -41,7 +41,7 @@ shOpenTheRepoInVSCode="1" #  Открыть ли вашу репу в VSCode
 shScreenLockAfterEndScript="1" # Заблокировать компьютер после завершения скрипта регистраций
 
 
-forpaste="\ \ \ \ User.Login = \"$shLogin\"\n\ \ \ \ User.Password = \"$shPassword\"\n\n\ \ \ \ User.Browser = $shBrowser\n\n\ \ \ \ User.BrowserAcc = $shBrowserAcc\n\n\ \ \ \ User.VisableBokmarks = $shVisableBokmarks\n\n\ \ \ \ User.WriteGitConfigs = $shWriteGitConfigs\n\ \ \ \ User.GitUserEmail = \"$shGitUserEmail\"\n\ \ \ \ User.GitUserName = \"$shGitUserName\"\n\n\ \ \ \ User.TurnOnWifiHotspot = $shTurnOnWifiHotspot\n\ \ \ \ User.WifiSSID = \"$shWifiSSID\"\n\ \ \ \ User.WifiPasswd = \"$shWifiPasswd\"\n\n\ \ \ \ User.AlemEmail = \"$shAlemEmail\"\n\ \ \ \ User.AlemPasswd = \"$shAlemPasswd\"\n\n\ \ \ \ User.CreateNewSSHforGITEA = $shCreateNewSSHforGITEA\n\n\ \ \ \ User.NumLockOff = $shNumLockOff\n\n\ \ \ \ User.AddRussianKeyboard = $shAddRussianKeyboard\n\n\ \ \ \ User.SetPKPasswd = $shSetPKPasswd\n\ \ \ \ User.PasswdOfPK = \"$shPasswdOfPK\"\n\ \ \ \ User.BlockWith_PauseBreak_Buttom = $shBlockWith_PauseBreak_Buttom\n\n\ \ \ \ User.CastomImageForBlockScreen = $shCastomImageForBlockScreen\n\ \ \ \ User.CastomImageForBlockScreenPath = \"$shCastomImageForBlockScreenPath\"\n\n\ \ \ \ User.GitCloneYourWorkingRepoFromGITEA = $shGitCloneYourWorkingRepoFromGITEA\n\ \ \ \ User.GITEA_RepoName = \"$shGITEA_RepoName\"\n\ \ \ \ User.OpenTheRepoInVSCode = $shOpenTheRepoInVSCode\n\n\ \ \ \ User.ScreenLockAfterEndScript = $shScreenLockAfterEndScript"
+forpaste="\ \ \ \ User.Login = \"$shLogin\"\n\ \ \ \ User.Password = \"$shPassword\"\n\n\ \ \ \ User.Browser = $shBrowser\n\n\ \ \ \ User.BrowserAcc = $shBrowserAcc\n\ \ \ \ User.BrowserAccEmail = \"$shBrowserAccEmail\"\n\ \ \ \ User.BrowserAccPassword = \"$shBrowserAccPassword\"\n\n\ \ \ \ User.VisableBokmarks = $shVisableBokmarks\n\n\ \ \ \ User.WriteGitConfigs = $shWriteGitConfigs\n\ \ \ \ User.GitUserEmail = \"$shGitUserEmail\"\n\ \ \ \ User.GitUserName = \"$shGitUserName\"\n\n\ \ \ \ User.TurnOnWifiHotspot = $shTurnOnWifiHotspot\n\ \ \ \ User.WifiSSID = \"$shWifiSSID\"\n\ \ \ \ User.WifiPasswd = \"$shWifiPasswd\"\n\n\ \ \ \ User.AlemEmail = \"$shAlemEmail\"\n\ \ \ \ User.AlemPasswd = \"$shAlemPasswd\"\n\n\ \ \ \ User.CreateNewSSHforGITEA = $shCreateNewSSHforGITEA\n\n\ \ \ \ User.NumLockOff = $shNumLockOff\n\n\ \ \ \ User.AddRussianKeyboard = $shAddRussianKeyboard\n\n\ \ \ \ User.SetPKPasswd = $shSetPKPasswd\n\ \ \ \ User.PasswdOfPK = \"$shPasswdOfPK\"\n\ \ \ \ User.BlockWith_PauseBreak_Buttom = $shBlockWith_PauseBreak_Buttom\n\n\ \ \ \ User.CastomImageForBlockScreen = $shCastomImageForBlockScreen\n\ \ \ \ User.CastomImageForBlockScreenPath = \"$shCastomImageForBlockScreenPath\"\n\n\ \ \ \ User.GitCloneYourWorkingRepoFromGITEA = $shGitCloneYourWorkingRepoFromGITEA\n\ \ \ \ User.GITEA_RepoName = \"$shGITEA_RepoName\"\n\ \ \ \ User.OpenTheRepoInVSCode = $shOpenTheRepoInVSCode\n\n\ \ \ \ User.ScreenLockAfterEndScript = $shScreenLockAfterEndScript"
 
 
-sed -i "59i$forpaste" reg.go
+sed -i "62i$forpaste" reg.go
