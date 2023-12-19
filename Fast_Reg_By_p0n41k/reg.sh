@@ -48,11 +48,18 @@ echo $Browser # Значение тут 0
 
 
 if [ "$Browser" -eq 0 ]; then
+    
     #Если Browser = 0 >> Firefox Web Browser
-    firefox -headless
+    xdotool mousemove 50 50 click 1
+    # sleep 3
+    # xdotool mousemove 3420 100 click 1
+    # sleep 0.2
+    # xdotool mousemove 3400 130 click 1 
+
 elif [ "$Browser" -eq 1 ]; then
     #Если Browser = 1 >> Google Chrome
-    google-chrome
+    echo Chrome
+    
 else
     echo "Неверно выбран Browser, пожалуйста пересоберите скрипт (0 = Firefox Web Browser / 1 = Google Chrome)"
     exit 0
@@ -61,11 +68,7 @@ fi
 
 exit 0
 # Открываем браузер и производим регистрацию
-xdotool mousemove 50 50 click 1
-sleep 3
-xdotool mousemove 3420 100 click 1
-sleep 0.2
-xdotool mousemove 3400 130 click 1 
+
 
 # Ждем загрузки страницы
 while true; do

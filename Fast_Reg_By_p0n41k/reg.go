@@ -62,7 +62,7 @@ func init() {
 	User.Login = "ynurmakh"
 	User.Password = "4025654080512"
 
-	User.Browser = 0
+	User.Browser = 1
 
 	User.BrowserAcc = 1
 	User.BrowserAccEmail = "nur_erbol_2002@mail.ru"
