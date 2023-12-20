@@ -42,23 +42,17 @@ OpenTheRepoInVSCode=${26}
 
 ScreenLockAfterEndScript=${27}
 
-echo $GITEA_RepoName
-echo $Browser # Значение тут 0
-
 
 
 if [ "$Browser" -eq 0 ]; then
-    
     #Если Browser = 0 >> Firefox Web Browser
     xdotool mousemove 50 50 click 1
-    # sleep 3
-    # xdotool mousemove 3420 100 click 1
-    # sleep 0.2
-    # xdotool mousemove 3400 130 click 1 
-
-elif [ "$Browser" -eq 1 ]; then
+    sleep 3
+    
+    elif [ "$Browser" -eq 1 ]; then
     #Если Browser = 1 >> Google Chrome
-    echo Chrome
+    echo "Временно не работает Chrome(поддержка будет в будущих патчах)"
+    exit 0
     
 else
     echo "Неверно выбран Browser, пожалуйста пересоберите скрипт (0 = Firefox Web Browser / 1 = Google Chrome)"
@@ -66,20 +60,32 @@ else
 fi
 
 
-exit 0
-# Открываем браузер и производим регистрацию
 
+if [ "$Browser" -eq 0 -a $BrowserAcc -eq 1 ]; then
+    
+    xdotool mousemove 3420 100 click 1
+    sleep 0.2
+    xdotool mousemove 3400 130 click 1
+    
+    # Ждем загрузки страницы
+    while true; do
+        color=$(import -window root -crop 1x1+1900+900 -depth 8 txt:- | awk 'NR==2 {print $3}')
+        if [ "$color" == "#0060DF" ]; then
+            sleep 0.5
+            break
+        else
+            sleep 0.5
+        fi
+    done
+    
+    xdotool type $BrowserAccEmail
+    
+    
+    
+fi
 
-# Ждем загрузки страницы
-while true; do
-  color=$(import -window root -crop 1x1+1900+900 -depth 8 txt:- | awk 'NR==2 {print $3}')
-  if [ "$color" == "#0060DF" ]; then
-  sleep 0.5
-  break
-  else
-  sleep 0.5
-  fi
-done
+exit 1
+
 
 
 # Пишем наш логин Firefox
@@ -105,7 +111,7 @@ git config --global user.name "ynurmakh"
 git config --global user.email "nur_erbol_2002@mail.ru"
 nmcli device wifi hotspot ifname wlp0s20f3 ssid "@lem" password "080512@lem"
 
-# Создаем новую вкладку и вставляем ссыку на 01.alem (3 сточка) 
+# Создаем новую вкладку и вставляем ссыку на 01.alem (3 сточка)
 
 xdotool key ctrl+t
 xdotool type "01.alem.school"
@@ -116,13 +122,13 @@ xdotool key Return
 # Ждем прогрузки сайта
 
 while true; do
-  color=$(import -window root -crop 1x1+2500+500 -depth 8 txt:- | awk 'NR==2 {print $3}')
-  if [ "$color" == "#292929" ]; then
-  sleep 0.5
-  break
-  else
-  sleep 0.5
-  fi
+    color=$(import -window root -crop 1x1+2500+500 -depth 8 txt:- | awk 'NR==2 {print $3}')
+    if [ "$color" == "#292929" ]; then
+        sleep 0.5
+        break
+    else
+        sleep 0.5
+    fi
 done
 
 
@@ -144,22 +150,22 @@ xdotool key Return
 
 # Ждем прогрузкий сайта, регаемся, удаляем старый SSH, копируем новый и вставляем его
 while true; do
-  color=$(import -window root -crop 1x1+1800+320 -depth 8 txt:- | awk 'NR==2 {print $3}')
-  if [ "$color" == "#AFAFAF" ]; then
-  break
-  else
-  sleep 0.5
-  fi
+    color=$(import -window root -crop 1x1+1800+320 -depth 8 txt:- | awk 'NR==2 {print $3}')
+    if [ "$color" == "#AFAFAF" ]; then
+        break
+    else
+        sleep 0.5
+    fi
 done
 xdotool mousemove 1800 320 click 1
 
 while true; do
-  color=$(import -window root -crop 1x1+2150+420 -depth 8 txt:- | awk 'NR==2 {print $3}')
-  if [ "$color" == "#DB2828" ]; then
-  break
-  else
-  sleep 0.5
-  fi
+    color=$(import -window root -crop 1x1+2150+420 -depth 8 txt:- | awk 'NR==2 {print $3}')
+    if [ "$color" == "#DB2828" ]; then
+        break
+    else
+        sleep 0.5
+    fi
 done
 xdotool mousemove 2150 420 click 1
 sleep 0.5
@@ -203,7 +209,7 @@ xdotool key Num_Lock
 
 # Добавляем русскую раскладку
 xdotool mousemove 50 600 click 1
-sleep 1 
+sleep 1
 xdotool key l
 xdotool key a
 xdotool key n
