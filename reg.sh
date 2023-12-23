@@ -4,11 +4,6 @@
 
 # Открываем браузер и производим регистрацию
 xdotool mousemove 50 50 click 1
-# sleep 3
-# xdotool mousemove 3420 100 click 1
-# sleep 0.2
-# xdotool mousemove 3400 130 click 1 
-
 
 while true; do
     color=$(import -window root -crop 1x1+200+300 -depth 8 txt:- | awk 'NR==2 {print $3}')
@@ -20,10 +15,9 @@ while true; do
     fi
 done
 
-
-xdotool type "https://accounts.firefox.com/?context=fx_desktop_v3&entrypoint=fxa_app_menu&action=email&service=sync"
-xdotool key Return
-
+xdotool mousemove 3420 100 click 1
+sleep 0.2
+xdotool mousemove 3400 130 click 1 
 
 
 # Ждем загрузки страницы
